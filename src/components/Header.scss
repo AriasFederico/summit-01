@@ -1,0 +1,78 @@
+@import '../sass/variables.scss';
+@import '../sass/mixins.scss';
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  max-width: 87.5rem;
+  margin: auto;
+  padding: 1.3rem 0;
+
+&-logo {
+  font-weight: 800;
+  font-family: $font-h;
+  font-size: 2rem;
+  color: map-get($palette-colors, 'primary' );
+}
+
+&-nav {
+  display: none;
+
+  @include respond-to('large') {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;  
+  }
+}
+
+&-sign {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+&-link-sign {
+  color: map-get($palette-colors, 'primary' );
+}
+
+&-svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: .175rem;
+  color: gray;
+}
+
+&-register-link {
+  padding: .7rem 1.5rem;
+  color: white;
+  background-color: map-get($palette-colors, 'primary' );
+  border-radius: $border-r;
+
+  &:hover {
+    background-color: map-get($palette-colors, 'primary-hover' );
+  }
+}
+
+&-hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: .4rem .5rem;
+  border: 1px solid gray;
+  border-radius: $border-r;
+
+  @include respond-to('large') {
+    display: none;
+  }
+}
+
+&-hamburger-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: black;
+}
+}

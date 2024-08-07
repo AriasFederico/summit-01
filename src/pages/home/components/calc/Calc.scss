@@ -1,0 +1,102 @@
+@import '../../../../sass/mixins.scss';
+@import '../../../../sass/variables.scss';
+
+
+.Calc {
+  width: 97%;
+  max-width: 87.5rem;
+  margin: 5rem auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+
+  @include respond-to('medium'){
+    margin-top: 7rem;
+  }
+
+  @include respond-to('large'){
+    margin-top: 10rem;
+    gap: 8rem;
+  }
+
+
+
+  
+  &-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    width: 90%;
+
+    @include respond-to('medium'){
+    }
+
+    @include respond-to('large'){
+      flex-direction: row;
+      gap: 4rem;
+    }
+  }
+
+
+  &-item {
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    gap: 1rem;
+
+    @include respond-to('large'){
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+
+  &-span {
+    color: map-get($palette-colors , 'purple-color' );
+    font-weight: 800;
+  }
+
+  &-img {
+    width: 90%;
+
+    @include respond-to('medium'){
+      width: 70%;
+    }
+
+    @include respond-to('large'){
+      width: 45%;
+    }
+
+  }
+
+  &-h2 {
+
+    font-weight: 600;
+
+    @include respond-to('medium'){
+      font-size: map-get($size-h2 , 'medium' );
+      text-align: center;
+    }
+
+    @include respond-to('large'){
+      text-align: start;
+    }
+  }
+
+  &-p {
+    line-height: 1.7;
+    color: gray;
+
+    @include respond-to('medium'){
+      max-width: 90%;
+      text-align: center;
+    }
+
+    @include respond-to('large'){
+      text-align: start;
+    }
+
+  }
+}
